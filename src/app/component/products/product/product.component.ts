@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../../../model/product';
-import { Products } from '../../../mock/mock-products';
+import { Location } from '@angular/common';
+
+//import { Products } from '../../../mock/mock-products';
+import { ActivatedRoute } from '@angular/router';
 import { ProductService } from '../../../services/product.service';
 
 @Component({
@@ -9,25 +12,31 @@ import { ProductService } from '../../../services/product.service';
   styleUrls: ['./product.component.scss']
 })
 export class ProductComponent implements OnInit {
-  products: Product[] = [];
+  //products: Product[] = [];
 
-  selectedProducts?: Product;
+  //selectedProducts?: Product;
 
-   //product: Product | undefined;
-   constructor(private productService: ProductService) {}  
+   product: Product | undefined;
+   
+   constructor(
+     private route: ActivatedRoute,
+     private productService: ProductService,
+     private location: Location
+   ) {} 
 
-   getProducts(): void {
-    this.productService.getProducts().subscribe(products => this.products = products);
-  }
+   getProduct(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.productService.getProduct(id)
+      .subscribe(product => this.product = product)  }
 
-  onSelect(product: Product): void {
+  /*onSelect(product: Product): void {
     this.selectedProducts = product;
   }
   showLoader(){
-    
-  }
+
+  }*/
   ngOnInit(): void {
-    this.getProducts();
+    this.getProduct();
   }
 
   

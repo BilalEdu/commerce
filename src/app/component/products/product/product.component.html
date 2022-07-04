@@ -1,11 +1,9 @@
-<div *ngIf="products">
-  <li *ngFor="let product of products" routerLink="/detail/{{product.id}}">
-    <button [class.selected]="product === selectedProducts" type="button" (click)="showLoader()" >
-      <span class="badge">{{product.id}}</span>
-      <span class="name">{{product.name}}</span>
-      <span class="price">{{product.price}}</span>
-      <img src="{{product.imagePath}}">
-
-    </button>
-  </li>
+<div *ngIf="product">
+  <h2>{{product.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{product.id}}</div>
+  <div>
+    <span class="name">{{product.name}}</span>
+    <span class="price"> {{product.price}}</span>
+    <img src="{{product.imagePath}}">
+  </div>
 </div>
