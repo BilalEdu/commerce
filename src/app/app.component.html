@@ -1,16 +1,21 @@
-<ul>
-  <li>
-    <a routerLink="/dashboard"> Anasayfa</a> 
-  </li>
-  <li>
-    <a href="Ürünler">Ürünler</a>
-  </li>
-  <li>
-    <a href="İletişim">İletişim</a>
-  </li>
-  <li>
-    <a href="Sepet">Sepet</a>
-  </li>
-</ul>
 
-<router-outlet></router-outlet> 
+<div class="menu">
+  <ul class="list">
+      <li>
+        <a routerLink="/dashboard"> Anasayfa</a> 
+      </li>
+      <li>
+          <a href="#urunler">Ürünler</a>
+      </li>
+      <li>
+          <a href="#iletisim">İletişim</a>
+      </li>
+
+  </ul>
+  <span class="sepet">
+      <a href="#sepet">Sepet</a>
+  </span>
+</div>
+
+
+<router-outlet></router-outlet>
