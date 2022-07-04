@@ -6,9 +6,9 @@ import { ProductComponent } from './component/products/product/product.component
 import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/anasayfa', pathMatch: 'full' },
-  { path: 'anasayfa', component: ProductsComponent },
-  {path: 'detail/:id', component: ProductComponent}
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: 'dashboard', component: ProductsComponent },
+  { path: 'detail/:id', component: ProductComponent}
 ];
 
 @NgModule({
