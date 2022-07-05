@@ -1,11 +1,23 @@
-
-<ul *ngIf="products" class="products">
-  <li class="product" *ngFor="let product of products" routerLink="/detail/{{product.id}}">
-    <div [class.selected]="product === selectedProducts" type="button" (click)="showLoader()" >
-      <img src="{{ product.imagePath }}"><br>
-      <span class="badge"> {{ product.id }}</span>
-      <span class="name"> {{ product.name }}</span>
-      <span class="price"> price={{ product.price }} TL</span>
-    </div>
-  </li>
-</ul>
+  <div class="site-inner">
+    
+    <div class="wrap">
+      <div id="products" class="products">
+        <ul *ngIf="products"></ul>
+          <div *ngFor="let product of products" routerLink="/detail/{{product.id}}">                
+            <div [class.selected]="product === selectedProducts" type="button" (click)="showLoader()" > 
+               <div class="column one-third">
+                 <div class="simpleCart_shelfItem item">
+                    <div class="item_image" style=" display: flex;
+                    justify-content: center;"><img src="{{product.imagePath}}" style="height: 300px ; "></div>
+                      <h2 class="item_name">{{product.name}}</h2>
+                      <div class="item_description">{{product.id}}</div>
+                         <div style="margin-top:10px;">
+                          <span class="item_price">${{product.price}}</span>
+                      <button href="javascript:;" class="item_add">ADD TO CART</button>
+                    </div>
+                  </div>
+                  </div>
+                 </div>
+</div>
+</div>
+</div>
