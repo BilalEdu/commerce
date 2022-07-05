@@ -8,7 +8,14 @@ import { CommonModule } from '@angular/common';
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard', component: ProductsComponent },
-  { path: 'detail/:id', component: ProductComponent}
+  { path: 'detail/:id', component: ProductComponent},
+  { path: 'category/:name', component: ProductsComponent },
+  { path: 'products', component: ProductsComponent },
+  { path: 'communication', component: ProductsComponent },
+  { path: 'basket', component: ProductsComponent },
+
+
+
 ];
 
 @NgModule({

@@ -18,7 +18,7 @@
     -webkit-flex: 2 0 auto;
     -ms-flex: 2 0 auto;
     flex: 2 0 auto;
-    padding-top: 50px;
+    padding-top: 0px;
 }
 
 
@@ -216,3 +216,20 @@ body {
     background-color: #333;
     color: #fff;
 }
+
+.category {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    width: 11%;
+    float: left;
+    text-align: center;
+  }
+  
+  .categories {
+    text-align: center;
+    text-align-all: center;
+    color: #2e9bb4;
+    font-weight: bold;
+    font-size: 1.2rem;
+  
+  }
